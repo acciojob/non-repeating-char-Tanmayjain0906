@@ -1,22 +1,27 @@
-let sentence = prompt("Enter a String");
-let obj = {};
-for(let i=0;i<sentence.length;i++)
-{
-    if(obj[sentence[i]]>=1)
-    {
-        obj[sentence[i]]++;
-    }
-    else
-    {
-        obj[sentence[i]] = 1;
-    }
-}
+let sentence = prompt("Enter a String")
+function firstNonRepeatedChar(sentence)
+	{
+		let arr = new Array(26);
+		for(let i=0;i<sentence.length;i++)
+			{
+				let code = sentence.charCodeAt(i)-65;
+				arr[code]++;
+			}
+		let ans = "";
+		let flag = false;
+		for(let i=0;i<sentence.length;i++)
+			{
+				let code = sentence.charCodeAt(i)-65;
+				if(arr[code] == 1)
+				{
+					alert(sentence.charAt(i);
+					flag = true;
+					return;
+				}
+			}
+		if(flag==false)
+		{
+			alert("null");
+		}
+	}
 
-for(let i=0;i<sentence.length;i++)
-{
-    if(obj[sentence[i]]==1)
-    {
-        console.log(sentence[i]);
-        break;
-    }
-}
